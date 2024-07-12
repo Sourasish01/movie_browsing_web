@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+   
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_container">
+            <div class="logo_container">
+                <h1 class="logo">chain</h1>
+            </div>
+            <div class="menu_container">
+                <ul class="menu_list">
+                    <li class="menu_list_item">Movies</li>
+                    <li class="menu_list_item">Series</li>
+                    <li class="menu_list_item">Popular</li>
+                    <li class="menu_list_item">Trends</li>
+                </ul>
+            </div>
+            <div class="search_container">
+                <div class="search_bar_container">
+                    <input type="text" class="search_bar" placeholder="Search..." id="searchInput">
+                </div>
+                <div class="search_cross_container">
+                    <i class="fas fa-times icon search_cross" onclick="clearSearch()"></i>
+                </div>
+                <button class="search_icon_container" id="search-button" onclick="searchMovie()">
+                    <i class="fas fa-search icon search_icon"></i>
+                </button>  
+            </div>          
+            <div class="profile_container">
+                <div class="profile_picture"></div>
+                <div class="profile_text_container">
+                    <span class="profile_text">Profile</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="fa-solid fa-house sidebar_icon home_icon"></i>
+        <i class="fa-solid fa-crown sidebar_icon crown_icon"></i>
+        <i class="fa-solid fa-bookmark sidebar_icon bookmark_icon"></i>
+    </div>
+    <div class="container">
+        <div class="content_container">
+            <div class="featured_content"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('images/f-1.jpg');"
+            >
+                <div class="featured_movie">
+                    <div class="featured_movie_wrapper">
+                        <img class="featured_img" id="movie-poster" src="images/joker.jpg" alt="Movie01">
+                        <span class="featured_title" id="movie-title">Joker</span>  
+                        <p class="featured_description" id="movie-description">During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure</p> 
+                        <button class="featured_button" onclick="paymentAlert()">
+                            WATCH
+                        </button>
+                        <div class="featured_bookmark">
+                            <i class="fa-solid fa-bookmark featured_bookmark_icon"></i>
+                        </div>
+                        <div class="featured_crown">
+                            <i class="fa-solid fa-crown featured_crown_icon"></i>
+                        </div>
+                        <button class="featured_payment">
+                            PAY: $3.00
+                        </button>
+                    </div> 
+                </div>            
+            </div>
+            <div class="movie_list_container">
+                <h1 class="movie_list_title">TOP HOLLYWOOD RELEASES</h1>
+                <div class="movie_list_wrapper">
+                    <div class="movie_list">
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/Dune02.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Dune: Part Two</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/Oppenheimer.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Oppenheimer</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/Batman.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">The Batman</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/avengers-endgame.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Avengers: EndGame</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                           
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/bladerunner.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Blade Runner 2049</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                           
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/Arrival.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Arrival</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/xmen.jpeg" alt="Movie01">
+                            <span class="movie_list_item_title">XMen: Apocalypse</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                           
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chevron-right movie_list_arrow"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="movie_list_container">
+                <h1 class="movie_list_title">TOP BOLLYWOOD RELEASES</h1>
+                <div class="movie_list_wrapper">
+                    <div class="movie_list">
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/kalki-2898ad.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Kalki 2898AD</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/Fighter.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Fighter</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/jawan.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Jawan</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/rakshabandhan.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Raksha Bandhan</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/uri.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Uri</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/baahubali.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Baahubali</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                        <div class="movie_list_item">
+                            <img class="movie_list_item_img" src="images/HeraPheri.jpg" alt="Movie01">
+                            <span class="movie_list_item_title">Hera Pheri</span>
+                            <p class="movie_list_item_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur molestiae pariatur ducimus alias dolorum nemo dignissimos cum? Deleniti voluptate minus in cumque odio.</p>
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chevron-right movie_list_arrow"></i>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>
